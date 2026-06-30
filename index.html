@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>TaskIngress | Document Intake and Workflow Routing</title>
+
+  <meta
+    name="description"
+    content="TaskIngress helps businesses capture documents from fragmented channels, route them to the correct workflow, and track what is pending, completed, blocked, or failed."
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================== -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrapper">
+      <a class="logo" href="#top" aria-label="TaskIngress home">
+        <span class="logo-mark" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+
+        <span class="logo-text">Task<span>Ingress</span></span>
+      </a>
+
+      <button
+        class="mobile-menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-navigation" id="main-navigation">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#use-cases">Use Cases</a>
+        <a href="#pilot-access">Pilot Access</a>
+
+        <a class="nav-cta" href="#pilot-access">
+          Request Pilot Access
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+    <section class="hero-section">
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Document intake infrastructure for modern businesses
+          </div>
+
+          <h1>
+            Every important document.
+            <span>Captured, routed and acted on.</span>
+          </h1>
+
+          <p class="hero-description">
+            TaskIngress helps businesses automatically collect documents from
+            the channels they already use, organize them, and route them to the
+            right workflow — with visibility into what arrived, what is pending,
+            and what needs attention.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#pilot-access">
+              Request Pilot Access
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a class="button button-secondary" href="#pilot-access">
+              Book a Demo
+            </a>
+          </div>
+
+          <div class="hero-proof">
+            <div>
+              <strong>One intake layer</strong>
+              <span>Across fragmented document channels</span>
+            </div>
+
+            <div>
+              <strong>Clear workflow visibility</strong>
+              <span>From arrival to completion</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard-style product visual -->
+        <div class="dashboard-preview reveal">
+          <div class="dashboard-window">
+            <div class="dashboard-topbar">
+              <div>
+                <p class="dashboard-kicker">TaskIngress Workspace</p>
+                <h2>Document Operations</h2>
+              </div>
+
+              <div class="window-controls" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="dashboard-metrics">
+              <article class="metric-card">
+                <div class="metric-header">
+                  <span>Documents Received</span>
+                  <span class="metric-icon">↓</span>
+                </div>
+
+                <strong>1,284</strong>
+                <small>+18% this month</small>
+              </article>
+
+              <article class="metric-card">
+                <div class="metric-header">
+                  <span>Pending Review</span>
+                  <span class="metric-icon">◷</span>
+                </div>
+
+                <strong>46</strong>
+                <small>12 require attention</small>
+              </article>
+
+              <article class="metric-card">
+                <div class="metric-header">
+                  <span>Completed</span>
+                  <span class="metric-icon">✓</span>
+                </div>
+
+                <strong>1,221</strong>
+                <small>95.1% processed</small>
+              </article>
+
+              <article class="metric-card">
+                <div class="metric-header">
+                  <span>Failed Uploads</span>
+                  <span class="metric-icon alert-icon">!</span>
+                </div>
+
+                <strong>17</strong>
+                <small class="error-text">Needs review</small>
+              </article>
+            </div>
+
+            <div class="dashboard-main">
+              <section class="recent-documents-panel">
+                <div class="panel-header">
+                  <div>
+                    <p>Latest activity</p>
+                    <h3>Recent documents</h3>
+                  </div>
+
+                  <span>Today</span>
+                </div>
+
+                <div class="document-row">
+                  <div class="document-icon">PDF</div>
+
+                  <div class="document-details">
+                    <strong>Supplier_Invoice_0421.pdf</strong>
+                    <span>Finance review queue</span>
+                  </div>
+
+                  <span class="channel-badge web">Web</span>
+                  <span class="status-badge routed">Routed</span>
+                </div>
+
+                <div class="document-row">
+                  <div class="document-icon">DOC</div>
+
+                  <div class="document-details">
+                    <strong>Client_Compliance_Record.docx</strong>
+                    <span>Compliance queue</span>
+                  </div>
+
+                  <span class="channel-badge desktop">Desktop</span>
+                  <span class="status-badge pending">Pending</span>
+                </div>
+
+                <div class="document-row">
+                  <div class="document-icon">PDF</div>
+
+                  <div class="document-details">
+                    <strong>Procurement_Request_118.pdf</strong>
+                    <span>Procurement review queue</span>
+                  </div>
+
+                  <span class="channel-badge api">API</span>
+                  <span class="status-badge completed">Completed</span>
+                </div>
+
+                <div class="document-row">
+                  <div class="document-icon">XLS</div>
+
+                  <div class="document-details">
+                    <strong>Monthly_Supporting_Data.xlsx</strong>
+                    <span>Finance review queue</span>
+                  </div>
+
+                  <span class="channel-badge desktop">Desktop</span>
+                  <span class="status-badge routed">Routed</span>
+                </div>
+              </section>
+
+              <aside class="workflow-panel">
+                <div class="panel-header">
+                  <div>
+                    <p>Workflow status</p>
+                    <h3>Queue overview</h3>
+                  </div>
+                </div>
+
+                <div class="queue-item">
+                  <div>
+                    <strong>Finance</strong>
+                    <span>24 documents</span>
+                  </div>
+
+                  <span class="queue-value">58%</span>
+                </div>
+
+                <div class="progress-track">
+                  <span style="width: 58%"></span>
+                </div>
+
+                <div class="queue-item">
+                  <div>
+                    <strong>Compliance</strong>
+                    <span>11 documents</span>
+                  </div>
+
+                  <span class="queue-value">26%</span>
+                </div>
+
+                <div class="progress-track">
+                  <span style="width: 26%"></span>
+                </div>
+
+                <div class="queue-item">
+                  <div>
+                    <strong>Procurement</strong>
+                    <span>7 documents</span>
+                  </div>
+
+                  <span class="queue-value">16%</span>
+                </div>
+
+                <div class="progress-track">
+                  <span style="width: 16%"></span>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container capability-strip reveal">
+        <span class="capability-label">Pilot-ready ingestion</span>
+
+        <span>Web upload</span>
+        <span>Desktop watched folders</span>
+        <span>External API</span>
+        <span>Routing dashboard</span>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PROBLEM
+    ========================================================== -->
+    <section class="section problem-section">
+      <div class="container split-layout">
+        <div class="section-heading reveal">
+          <p class="section-label">The problem</p>
+
+          <h2>
+            Documents arrive everywhere.
+            <span>Accountability disappears.</span>
+          </h2>
+        </div>
+
+        <div class="problem-content reveal">
+          <p>
+            Business documents arrive through inboxes, shared folders, manual
+            uploads, WhatsApp messages, and external systems. The documents may
+            be important, but the intake process is fragmented.
+          </p>
+
+          <p>
+            Teams waste time manually sorting files, chasing missing records,
+            forwarding attachments, and checking whether someone took action.
+            When visibility is poor, work slows down and documents fall through
+            the cracks.
+          </p>
+
+          <div class="problem-points">
+            <div>
+              <span>01</span>
+              <p>Files are scattered across disconnected channels.</p>
+            </div>
+
+            <div>
+              <span>02</span>
+              <p>Teams cannot easily see what is waiting for action.</p>
+            </div>
+
+            <div>
+              <span>03</span>
+              <p>Manual follow-up becomes the default workflow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         HOW IT WORKS
+    ========================================================== -->
+    <section class="section how-section" id="how-it-works">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="section-label">How it works</p>
+
+          <h2>
+            From document arrival to
+            <span>clear next action.</span>
+          </h2>
+
+          <p>
+            TaskIngress creates a structured intake layer between the documents
+            your business receives and the workflows your team must complete.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <div class="step-number">01</div>
+            <div class="step-icon">↓</div>
+
+            <h3>Capture</h3>
+
+            <p>
+              Collect documents from uploads, watched folders, APIs, and
+              connected channels.
+            </p>
+          </article>
+
+          <article class="step-card reveal">
+            <div class="step-number">02</div>
+            <div class="step-icon">◇</div>
+
+            <h3>Understand</h3>
+
+            <p>
+              Identify document types and extract the information that matters.
+            </p>
+          </article>
+
+          <article class="step-card reveal">
+            <div class="step-number">03</div>
+            <div class="step-icon">↗</div>
+
+            <h3>Route</h3>
+
+            <p>
+              Send each item to the correct team, workflow, or review queue.
+            </p>
+          </article>
+
+          <article class="step-card reveal">
+            <div class="step-number">04</div>
+            <div class="step-icon">✓</div>
+
+            <h3>Track</h3>
+
+            <p>
+              Monitor pending, completed, blocked, and failed items in one
+              place.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CAPABILITIES
+    ========================================================== -->
+    <section class="section capabilities-section">
+      <div class="container">
+        <div class="capabilities-grid">
+          <div class="capabilities-intro reveal">
+            <p class="section-label">Pilot scope</p>
+
+            <h2>
+              Lightweight now.
+              <span>Designed to expand.</span>
+            </h2>
+
+            <p>
+              The current pilot focuses on reducing manual document handling
+              without trying to replace the systems businesses already use.
+            </p>
+          </div>
+
+          <div class="capability-columns">
+            <article class="capability-column live reveal">
+              <div class="capability-column-header">
+                <span class="status-indicator"></span>
+                <h3>Pilot-ready today</h3>
+              </div>
+
+              <ul>
+                <li>Web document upload</li>
+                <li>Desktop watched-folder ingestion</li>
+                <li>External API ingestion</li>
+                <li>Document list and routing dashboard</li>
+                <li>Queue and status visibility</li>
+                <li>Source-channel tracking</li>
+                <li>Upload-log summary</li>
+              </ul>
+            </article>
+
+            <article class="capability-column planned reveal">
+              <div class="capability-column-header">
+                <span class="status-indicator"></span>
+                <h3>In development or planned</h3>
+              </div>
+
+              <ul>
+                <li>Email intake</li>
+                <li>WhatsApp intake</li>
+                <li>Webhook foundation</li>
+                <li>Approved finance-data export</li>
+                <li>Draft management P&amp;L support</li>
+              </ul>
+
+              <p class="capability-note">
+                Planned functionality is being developed progressively during
+                the pilot phase.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         USE CASES
+    ========================================================== -->
+    <section class="section use-cases-section" id="use-cases">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-label">Use cases</p>
+
+          <h2>
+            A flexible intake layer for
+            <span>document-heavy workflows.</span>
+          </h2>
+
+          <p>
+            TaskIngress is not limited to invoices. It is designed for
+            businesses that need a clearer way to receive, organize, route, and
+            monitor operational documents.
+          </p>
+        </div>
+
+        <div class="use-cases-grid">
+          <article class="use-case-card reveal">
+            <div class="use-case-icon">01</div>
+
+            <h3>Finance and accounting documents</h3>
+
+            <p>
+              Organize invoices, expense records, supporting schedules, and
+              finance documentation before review.
+            </p>
+          </article>
+
+          <article class="use-case-card reveal">
+            <div class="use-case-icon">02</div>
+
+            <h3>Procurement records</h3>
+
+            <p>
+              Route purchase requests, quotations, supplier records, and
+              supporting documentation to the correct queue.
+            </p>
+          </article>
+
+          <article class="use-case-card reveal">
+            <div class="use-case-icon">03</div>
+
+            <h3>Compliance and tax-support documents</h3>
+
+            <p>
+              Collect client records, track outstanding items, and organize
+              documentation for review workflows.
+            </p>
+          </article>
+
+          <article class="use-case-card reveal">
+            <div class="use-case-icon">04</div>
+
+            <h3>Legal and administrative records</h3>
+
+            <p>
+              Improve visibility across contracts, corporate records, forms,
+              and administrative files.
+            </p>
+          </article>
+
+          <article class="use-case-card wide reveal">
+            <div class="use-case-icon">05</div>
+
+            <div>
+              <h3>Industry-specific workflows</h3>
+
+              <p>
+                Configure intake and routing around the documents that matter to
+                your business, without turning TaskIngress into a heavyweight
+                ERP implementation.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="accounting-note reveal">
+          <div class="note-icon">+</div>
+
+          <div>
+            <strong>For accounting and tax teams</strong>
+
+            <p>
+              Receive client documents, identify missing records, organize
+              finance files, and prepare approved data for reporting workflows.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PILOT ACCESS FORM
+    ========================================================== -->
+    <section class="section pilot-section" id="pilot-access">
+      <div class="container pilot-grid">
+        <div class="pilot-copy reveal">
+          <p class="section-label">Pilot access</p>
+
+          <h2>
+            Join the
+            <span>TaskIngress pilot.</span>
+          </h2>
+
+          <p>
+            We are onboarding a limited number of businesses and
+            professional-services firms that want to reduce manual document
+            handling and improve workflow visibility.
+          </p>
+
+          <div class="pilot-benefits">
+            <div>
+              <span>✓</span>
+
+              <div>
+                <strong>Practical onboarding</strong>
+                <p>Start with the channels and workflows that matter most.</p>
+              </div>
+            </div>
+
+            <div>
+              <span>✓</span>
+
+              <div>
+                <strong>Direct product feedback loop</strong>
+                <p>Help shape the platform around real operational needs.</p>
+              </div>
+            </div>
+
+            <div>
+              <span>✓</span>
+
+              <div>
+                <strong>Designed for SMB workflows</strong>
+                <p>Improve intake without replacing your entire tech stack.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card reveal">
+          <div id="form-container">
+            <div class="form-heading">
+              <h3>Request pilot access</h3>
+
+              <p>
+                Tell us a little about your current document workflow.
+              </p>
+            </div>
+
+            <form
+                id="pilot-form"
+                action="https://formspree.io/f/mojoqkvb"
+                method="POST"
+            >
+            <input
+                type="hidden"
+                name="_subject"
+                value="New TaskIngress pilot access request"
+            />
+
+            <input
+                type="hidden"
+                name="source"
+                value="TaskIngress public landing page"
+            />
+              <div class="form-row">
+                <label>
+                  <span>Name</span>
+
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                  />
+                </label>
+
+                <label>
+                  <span>Company</span>
+
+                  <input
+                    type="text"
+                    name="company"
+                    placeholder="Company name"
+                    required
+                  />
+                </label>
+              </div>
+
+              <label>
+                <span>Work email</span>
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@company.com"
+                  required
+                />
+              </label>
+
+              <div class="form-row">
+                <label>
+                  <span>Industry</span>
+
+                  <select name="industry" required>
+                    <option value="" disabled selected>Select industry</option>
+                    <option>Accounting or tax services</option>
+                    <option>Professional services</option>
+                    <option>Retail or distribution</option>
+                    <option>Construction or property</option>
+                    <option>Legal services</option>
+                    <option>Healthcare</option>
+                    <option>Other</option>
+                  </select>
+                </label>
+
+                <label>
+                  <span>Approximate monthly document volume</span>
+
+                  <select name="documentVolume" required>
+                    <option value="" disabled selected>Select volume</option>
+                    <option>Fewer than 100 documents</option>
+                    <option>100–500 documents</option>
+                    <option>500–2,000 documents</option>
+                    <option>2,000–10,000 documents</option>
+                    <option>More than 10,000 documents</option>
+                  </select>
+                </label>
+              </div>
+
+              <fieldset>
+                <legend>Current document channels</legend>
+
+                <div class="checkbox-grid">
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="channels" value="Email" />
+                    <span>Email</span>
+                  </label>
+
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="channels" value="WhatsApp" />
+                    <span>WhatsApp</span>
+                  </label>
+
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="channels" value="Shared folders" />
+                    <span>Shared folders</span>
+                  </label>
+
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="channels" value="Manual uploads" />
+                    <span>Manual uploads</span>
+                  </label>
+
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="channels" value="External systems" />
+                    <span>External systems</span>
+                  </label>
+
+                  <label class="checkbox-option">
+                    <input type="checkbox" name="channels" value="Other" />
+                    <span>Other</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="form-row">
+
+            <label>
+                <span>How are documents currently handled?</span>
+
+                <select name="currentHandling" required>
+                <option value="" disabled selected>Select current process</option>
+                <option>Mostly manual</option>
+                <option>Partly automated</option>
+                <option>Using shared folders or email rules</option>
+                <option>Using an existing workflow tool</option>
+                <option>Not sure</option>
+                </select>
+            </label>
+
+            <label>
+                <span>How urgent is this problem?</span>
+
+                <select name="urgency" required>
+                <option value="" disabled selected>Select urgency</option>
+                <option>Exploring</option>
+                <option>Need improvement this quarter</option>
+                <option>Actively looking for a solution</option>
+                <option>Urgent operational problem</option>
+                </select>
+            </label>
+            </div>
+
+              <label>
+                <span>Biggest workflow challenge</span>
+
+                <textarea
+                  name="challenge"
+                  rows="5"
+                  placeholder="For example: documents arrive through multiple channels and we struggle to track what has been reviewed..."
+                  required
+                ></textarea>
+              </label>
+
+              <button class="button button-primary submit-button" type="submit">
+                Submit pilot request
+                <span aria-hidden="true">→</span>
+              </button>
+
+              <p class="form-disclaimer">
+                We review pilot requests manually and will contact selected businesses directly.
+              </p>
+            </form>
+          </div>
+
+          <div class="success-message" id="success-message" hidden>
+            <div class="success-icon">✓</div>
+
+            <h3>Thank you for your interest.</h3>
+
+            <p>
+              Your pilot request has been received. We review submissions manually
+                and will contact selected businesses directly.
+            </p>
+
+            <a
+                class="button button-primary"
+                href="https://calendar.app.google/RbVUqmpV63NCJXpS6"
+                target="_blank"
+                rel="noopener"
+                >
+                Book a 20-minute Demo
+                <span aria-hidden="true">→</span>
+            </a>
+
+            <button class="button button-secondary" id="reset-form" type="button">
+              Submit another response
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo footer-logo" href="#top" aria-label="TaskIngress home">
+          <span class="logo-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+
+          <span class="logo-text">Task<span>Ingress</span></span>
+        </a>
+
+        <p>
+          Document intake and workflow routing for modern businesses.
+        </p>
+      </div>
+
+      <div class="footer-details">
+        <a href="mailto:hello@taskingress.com">
+          hello@taskingress.com
+        </a>
+
+        <p>
+          © <span id="copyright-year"></span> TaskIngress.
+          All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
